@@ -7,7 +7,7 @@ import dotenv
 dotenv.load_dotenv()
 
 SCOPES = ['https://www.googleapis.com/auth/calendar']
-SERVICE_ACCOUNT_FILE = os.path.join(os.path.dirname(__file__), 'service_account.json')
+SERVICE_ACCOUNT_FILE = 'service_account.json'
 CALENDAR_ID = os.getenv("CALENDAR_ID")
 
 def get_calendar_service():
