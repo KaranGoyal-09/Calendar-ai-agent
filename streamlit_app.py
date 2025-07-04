@@ -105,7 +105,7 @@ if send_btn and user_input.strip():
     with st.spinner("AI is thinking..."):
         try:
             response = requests.post(
-                "http://localhost:8000/chat",
+                "https://calendar-backend-c3xn.onrender.com/docs#/default/chat_endpoint_chat_post",
                 json={"message": user_input},
                 timeout=60
             )
