@@ -104,8 +104,9 @@ if send_btn and user_input.strip():
     st.session_state.messages.append({"role": "user", "content": user_input})
     with st.spinner("AI is thinking..."):
         try:
+            BACKEND_URL = "https://calendar-backend-c3xn.onrender.com"
             response = requests.post(
-                "https://calendar-backend-c3xn.onrender.com/docs#/default/chat_endpoint_chat_post",
+                f"{BACKEND_URL}/chat",
                 json={"message": user_input},
                 timeout=60
             )
